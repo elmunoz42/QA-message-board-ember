@@ -4,11 +4,20 @@ Ember App that allows users to post questions and/or respective answers using Fi
 
 ## Objectives and Strategies
 
+
+
+
+
+Allow users to add answers to a question. Answers should be added and viewed on the same page as the question they respond to.
 |Objective |Strategy |
 |:---------|:--------|
-|1)Application template contains header with link(s).|Application template automatically generated. Style it. Add link back to homepage.|
-|2)Data is stored in and retrieved from Ember Data models and Firebase.|Create models first then JSON files to upload to the database and then integrate database. Make sure to create one to many relationship where one question can have many answers.|
-|3)Components are used to create the display and behavior for your templates.|Create index page and use #each loop to display components for questions.|
+|1)Application template contains header with link(s). Include a header and/or navbar that appears on all pages containing the name of your site and a link to the home page.|Application template automatically generated. Style it. Add link back to homepage.|
+|2a)Data is stored in and retrieved from Ember Data models and Firebase.|Create models first then JSON files to upload to the database and then integrate database. Make sure to create one to many relationship where one question can have many answers.|
+|2b)Questions should have the content of the question itself, an author and additional notes.
+Answers should have the content of the answer and the author.|Add keys to respective models.|
+|3a)Components are used to create the display and behavior for your templates. List all questions on the homepage, with only the question and the name of the author showing.|Create index page and use #each loop to display components for questions.|
+|3b)Add component for creating new question.|Use show and hide with button and form.|
+|3c)Users can click on a question, and be routed to another page containing additional information.Allow users to edit questions.|Create dynamic page for question add update actions on the dynamic page.|
 |4)One-to-many relationship exists between Question and Answers.|This is already set up in the model now create a #each loop in the dynamic template for a given question to display all the answers.|
 |5)Styling | CSS .jumbotron can be used for the questions and .well for the answers. Find an abstract background and give the wells some translucency using rgba hexcode.|
 |6)Add more info to about page.| Get picture and bio from CMK-porfolio.|
