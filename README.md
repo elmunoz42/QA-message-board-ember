@@ -9,8 +9,8 @@ Ember App that allows users to post questions and/or respective answers using Fi
 |:---------|:--------|
 |1)DONE. Application template contains header with link(s). Include a header and/or navbar that appears on all pages containing the name of your site and a link to the home page.|Application template automatically generated. Style it. Add link back to homepage.|
 |2a)CHECK. Data is stored in and retrieved from Ember Data models and Firebase.|Create models first then JSON files to upload to the database and then integrate database. Make sure to create one to many relationship where one question can have many answers.|
-|2b)DONE. Questions should have the content of the question itself, an author and additional notes.
-Answers should have the content of the answer and the author.|Add keys to respective models.|
+|2b)DONE. Questions should have the content of the question itself, an author and additional notes.|Add keys to respective models.|
+|2c)DONE. Answers should have the content of the answer and the author.|Add keys to respective models.|
 |3a)DONE.Components are used to create the display and behavior for your templates. List all questions on the homepage, with only the question and the name of the author showing.|Create index page and use #each loop to display components for questions.|
 |3b)DONE. Add component for creating new question.|Use show and hide with button and form.|
 |3c)DONE. Users can click on a question, and be routed to another page containing additional information.Allow users to edit questions.|Create dynamic page for question add update actions on the dynamic page.|
