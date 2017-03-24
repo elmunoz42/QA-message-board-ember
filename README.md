@@ -1,7 +1,15 @@
-# qa-message-board
+# QA-message-board
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ember App that allows users to post questions and/or respective answers using Firebase Database.
+
+## Objectives and Strategies
+
+|Objective |Strategy |
+|:---------|:--------|
+|1)Application template contains header with link(s).|Create application template |
+|2)Data is stored in and retrieved from Ember Data models and Firebase.|Create models first then database. Make sure to create on to many relationship where one question can have many answers.|
+|3)Components are used to create display and behavior for your templates.|Create index page and use #each loop to display components for questions.|
+|4)One-to-many relationship exists between Question and Answers.|This is already set up in the model now create a #each loop in the dynamic template for a given question to display all the answers.|
 
 ## Prerequisites
 
