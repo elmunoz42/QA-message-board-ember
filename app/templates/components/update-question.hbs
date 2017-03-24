@@ -15,8 +15,8 @@
         <label for="body">Details</label>
         {{input value=body id="body"}}
       </div>
-      <button {{action 'update' question}}>Update</button>
+      <button class='btn btn-info' {{action 'update' question}}>Update</button>
   </form>
 {{else}}
-  <button class='btn btn-info'{{action 'updateQuestionForm'}}>Update Question</button>
+  <button class='btn btn-info' {{action 'updateQuestionForm'}}>Update Question</button>
 {{/if}}
