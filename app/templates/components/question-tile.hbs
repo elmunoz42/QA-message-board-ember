@@ -1,4 +1,4 @@
 <ul>
-  <li>QUESTION: {{question.title}}</li>
-  <li>AUTHOR: {{question.author}}</li>
+  {{#link-to 'question' question.id}}<li>QUESTION: {{question.title}}</li>
+  <li>AUTHOR: {{question.author}}</li>{{/link-to}}
 </ul>
