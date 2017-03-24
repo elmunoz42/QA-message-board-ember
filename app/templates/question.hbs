@@ -1,10 +1,4 @@
 
-{{question-detail question=model}}
+{{question-detail question=model destroyQuestion="destroyQuestion"}}
 {{update-question question=model update="update"}}
 {{create-answer question=model saveAnswer="saveAnswer"}}
-
-<ul>
-  {{#each model.answers as |answer| }}
-    {{answer-tile answer=answer}}
-  {{/each}}
-</ul>

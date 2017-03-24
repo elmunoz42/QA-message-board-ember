@@ -2,4 +2,11 @@
   <h2>QUESTION: {{question.title}}</h2>
   <li>AUTHOR: {{question.author}}</li>
   <li>DETAILS: {{question.body}}</li>
+  <button {{action 'delete' question}}>Delete</button>
+
+  <ul>
+    {{#each question.answers as |answer| }}
+      {{answer-tile answer=answer}}
+    {{/each}}
+  </ul>
 </ul>
