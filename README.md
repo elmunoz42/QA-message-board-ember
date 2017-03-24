@@ -37,6 +37,7 @@ You will need the following things properly installed on your computer.
 * `bower install`
 * `ember install emberfire`
 * `ember install ember-bootstrap`
+* [it will be necessary to create a firebase account and link it to this project](https://www.learnhowtoprogram.com/javascript/ember-js/ember-data-and-firebase)
 
 ## Running / Development
 
