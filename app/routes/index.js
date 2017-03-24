@@ -13,5 +13,5 @@ actions: {
       newQuestion.save();
       this.transitionTo('index');
     }
-  }
+},
 });

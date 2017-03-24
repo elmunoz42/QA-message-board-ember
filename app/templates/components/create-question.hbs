@@ -2,7 +2,7 @@
 
 {{#if addNewQuestion}}
   <form>
-    <h1>New Rental</h1>
+    <h1>New Question</h1>
       <div class="form-group">
         <label for="title">Question title:</label>
         {{input value=title id="title"}}
@@ -20,5 +20,5 @@
       <button {{action 'saveQuestion'}}>Save</button>
   </form>
 {{else}}
-  <button {{action 'questionFormShow'}}>New Rental</button>
+  <button {{action 'questionFormShow'}}>New Question</button>
 {{/if}}
