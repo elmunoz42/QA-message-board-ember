@@ -14,7 +14,7 @@ Ember App that allows users to post questions and/or respective answers using Fi
 |3a)DONE.Components are used to create the display and behavior for your templates. List all questions on the homepage, with only the question and the name of the author showing.|Create index page and use #each loop to display components for questions.|
 |3b)DONE. Add component for creating new question.|Use show and hide with button and form.|
 |3c)DONE. Users can click on a question, and be routed to another page containing additional information.Allow users to edit questions.|Create dynamic page for question add update actions on the dynamic page.|
-|3d)Allow users to add answers to a question. Answers should be added and viewed on the same page as the question they respond to.|Add a create answer component on the question dynamic page that saves the relationship and the question on the database.|
+|3d)Allow users to add answers to a question. Answers should be added and viewed on the same page as the question they respond to.|Add a create answer component on the question dynamic page that saves the relationship and the answer on the database.|
 |3e)Users can delete questions. | Create delete-question components and functionality.|
 |4)Styling | CSS .jumbotron can be used for the questions and .well for the answers. Find an abstract background and give the wells some translucency using rgba hexcode.|
 |5)Add more info to about page.| Get picture and bio from CMK-porfolio.|
