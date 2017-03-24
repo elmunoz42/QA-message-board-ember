@@ -1,1 +1,11 @@
-{{outlet}}
+<ul>
+  <h2>QUESTION: {{model.title}}</h2>
+  <li>AUTHOR: {{model.author}}</li>
+</ul>
+
+{{update-question question=model update="update"}}
+
+
+<!-- {{#each model.answers as |answer|}}
+  {{answer-tile answer=answer}}
+{{/each}} -->
