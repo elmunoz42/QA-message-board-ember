@@ -1,14 +1,10 @@
-<ul>
-  <h2>QUESTION: {{model.title}}</h2>
-  <li>AUTHOR: {{model.author}}</li>
-  <li>DETAILS: {{model.body}}</li>
-</ul>
 
+{{question-detail question=model}}
 {{update-question question=model update="update"}}
 {{create-answer question=model saveAnswer="saveAnswer"}}
 
 <ul>
   {{#each model.answers as |answer| }}
-    <li>"{{answer.body}}" by {{answer.author}}</li>
+    {{answer-tile answer=answer}}
   {{/each}}
 </ul>
