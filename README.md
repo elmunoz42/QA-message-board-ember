@@ -8,7 +8,7 @@ Ember App that allows users to post questions and/or respective answers using Fi
 |:---------|:--------|
 |1)Application template contains header with link(s).|Application template automatically generated. Style it. Add link back to homepage.|
 |2)Data is stored in and retrieved from Ember Data models and Firebase.|Create models first then database. Make sure to create one to many relationship where one question can have many answers.|
-|3)Components are used to create the display and behavior for your templates.|Create index page and use #each loop to display components for questions.|
+|3)Components are used to create the display and behavior for your templates.|Create about page and use #each loop to display components for questions.|
 |4)One-to-many relationship exists between Question and Answers.|This is already set up in the model now create a #each loop in the dynamic template for a given question to display all the answers.|
 |5)Styling | CSS .jumbotron can be used for the questions and .well for the answers. Find an abstract background and give the wells some translucency using rgba hexcode.|
 
