@@ -1,4 +1,6 @@
-<ul>
-  {{#link-to 'question' question.id}}<li>QUESTION: {{question.title}}</li>
-  <li>AUTHOR: {{question.author}}</li>{{/link-to}}
-</ul>
+<div class="well">
+  {{#link-to 'question' question.id}}<h4>QUESTION: {{question.title}}</h4>
+  <ul><li>by {{question.author}}</li>
+  </ul>
+  {{/link-to}}
+</div>

@@ -11,8 +11,8 @@
         <label for="body">Answer</label>
         {{input value=body id="body"}}
       </div>
-      <button {{action 'saveAnswer'}}>Save</button>
+      <button class="btn btn-info" {{action 'saveAnswer'}}>Save</button>
   </form>
 {{else}}
-  <button {{action 'answerFormShow'}}>New Answer</button>
+  <button class="btn btn-info" {{action 'answerFormShow'}}>New Answer</button>
 {{/if}}

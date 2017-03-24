@@ -1,10 +1,14 @@
 html {
-  background-color: black;
+  background-color: lightblue;
   color: white;
 }
 body {
-  background-color: #36454f;
+  background-color: lightblue;
   color: white;
+}
+h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 a {
   color: white;
@@ -25,17 +29,35 @@ hr {
 header {
   height: 350px;
 }
+input {
+  color: #36454f;
+}
+img {
+  width: 300px;
+}
+#banner {
+  color: #000099;
+  padding-top: 10px;
+  text-align: center;
+  text-shadow: 4px 4px lightblue;
+}
+#navbar {
+  padding-top: 90px;
+  text-align: center;
+}
+#navbar a {
+  color: lightblue;
+  text-align: center;
+  text-shadow: 4px 4px #000099;
+}
 .image {
   margin-top: 20px;
   background: url('http://ampthemag.com/wp-content/uploads/2016/05/festival-7th-sunday.jpg') no-repeat center center;
-  background-size: 100% 100%;
+  background-size: 100% 160%;
 }
 .jumbotron {
-  background-color: transparent;
-  /*background-color:rgba(200, 200, 200, 0.8);*/
+  background-color: #000099;
 }
-
 .well {
-  background-color: transparent;
-  background-color: rgba(200, 200, 200, 0.8);
+  background-color: #1E90FF;
 }
