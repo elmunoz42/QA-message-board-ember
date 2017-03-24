@@ -1,10 +1,6 @@
 <h1>Questions</h1>
 {{#each model.questions as |question|}}
-  <li>{{question.title}}</li>
-  <li>{{question.author}}</li>
-  <li>{{question.body}}</li>
-{{/each}}
-{{#each model.answers as |answer|}}
-  <li>{{answer.body}}</li>
-  <li>{{answer.author}}</li>
+  <div class="well">
+    {{question-tile question=question}}
+  </div>
 {{/each}}
