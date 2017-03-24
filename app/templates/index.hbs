@@ -1,6 +1,11 @@
-<h1>Questions</h1>
+<h1>So you think you are good at music trivia?</h1>
+
+{{create-question saveQuestion="saveQuestion"}}
+
 {{#each model.questions as |question|}}
+
   <div class="well">
-    {{question-tile question=question}}
+    {{question-tile question=question }}
   </div>
+  
 {{/each}}
