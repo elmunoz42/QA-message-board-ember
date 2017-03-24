@@ -1,1 +1,22 @@
-<!-- TODO -->
+{{#if updateQuestion}}
+  <form>
+    <h1>New Rental</h1>
+      <div class="form-group">
+        <label for="title">Question title:</label>
+        {{input value=title id="title"}}
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author</label>
+        {{input value=author id="author"}}
+      </div>
+
+      <div class="form-group">
+        <label for="body">Details</label>
+        {{input value=body id="body"}}
+      </div>
+      <button {{action 'saveQuestion'}}>Save</button>
+  </form>
+{{else}}
+  <button {{action 'questionFormShow'}}>New Rental</button>
+{{/if}}
