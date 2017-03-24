@@ -1,11 +1,13 @@
-<h1>So you think you are good at music trivia?</h1>
+<div class="jumbotron">
+  <h3>So you think you are good at music trivia?</h3>
+</div>
 
 {{create-question saveQuestion="saveQuestion"}}
 
 {{#each model.questions as |question|}}
 
-  <div class="well">
+  <div class="jumbotron">
     {{question-tile question=question }}
   </div>
-  
+
 {{/each}}

@@ -1,8 +1,9 @@
 
 
 {{#if addNewQuestion}}
+<div class="jumbotron">
   <form>
-    <h1>New Question</h1>
+    <h3>New Question</h3>
       <div class="form-group">
         <label for="title">Question title:</label>
         {{input value=title id="title"}}
@@ -17,8 +18,11 @@
         <label for="body">Details</label>
         {{input value=body id="body"}}
       </div>
-      <button {{action 'saveQuestion'}}>Save</button>
+      <button class="btn btn-success" {{action 'saveQuestion'}}>Save</button>
   </form>
+</div>
 {{else}}
-  <button {{action 'questionFormShow'}}>New Question</button>
+
+  <button class="btn btn-success" {{action 'questionFormShow'}}>New Question</button>
+
 {{/if}}

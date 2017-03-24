@@ -1,9 +1,17 @@
 <div class="container">
-  <header class="jumbotron">
-    <h1>Question and Answer Message Board</h1>
-  </header>
-  {{#link-to 'index'}}Questions{{/link-to}}
-  {{#link-to 'about'}}About{{/link-to}}
+  <header class="jumbotron image">
+    <h1>Music Trivia Challenge</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>{{#link-to 'index'}}Questions{{/link-to}}</h4>
+      </div>
+      <!-- left column -->
+      <div class="col-sm-6">
+        <h4>{{#link-to 'about'}}About{{/link-to}}</h4>
+      </div>
+      <!-- right column -->
+    </div>
+</header>
   <hr>
 
 {{outlet}}
@@ -11,7 +19,7 @@
 
 <hr>
 <footer>
-  <a href="https://elmunoz42.github.io/CMK-Portfolio/">Carlos Munoz Kampff - 617-780-8362 - elmunoz42@gmail.com</a>
+  <a href="https://elmunoz42.github.io/CMK-Portfolio/">Carlos Munoz Kampff</a>
 </footer>
 </div>
 <!-- container -->

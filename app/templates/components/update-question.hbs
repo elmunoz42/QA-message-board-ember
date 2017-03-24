@@ -1,6 +1,6 @@
 {{#if updateQuestionForm}}
   <form>
-    <h1>New Question</h1>
+    <h3>update...</h3>
       <div class="form-group">
         <label for="title">Question title:</label>
         {{input value=title id="title"}}
@@ -18,5 +18,5 @@
       <button {{action 'update' question}}>Update</button>
   </form>
 {{else}}
-  <button {{action 'updateQuestionForm'}}>Update Question</button>
+  <button class='btn btn-info'{{action 'updateQuestionForm'}}>Update Question</button>
 {{/if}}

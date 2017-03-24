@@ -1,12 +1,14 @@
-<ul>
-  <h2>QUESTION: {{question.title}}</h2>
-  <li>AUTHOR: {{question.author}}</li>
-  <li>DETAILS: {{question.body}}</li>
-  <button {{action 'delete' question}}>Delete</button>
 
+
+<button class="btn btn-danger"{{action 'delete' question}}>delete this question</button>
+<hr>
+    <h2>QUESTION: {{question.title}}</h2>
+    <ul>
+      <li>AUTHOR: {{question.author}}</li>
+      <li>DETAILS: {{question.body}}</li>
+    </ul>
   <ul>
     {{#each question.answers as |answer| }}
       {{answer-tile answer=answer}}
     {{/each}}
   </ul>
-</ul>
