@@ -1,21 +1,21 @@
 {{#if updateQuestionForm}}
   <form>
     <h3>update...</h3>
-      <div class="form-group">
-        <label for="title">Question title:</label>
-        {{input value=title id="title"}}
-      </div>
+    <div class="form-group">
+      <label for="title">Question title:</label>
+      {{input value=title id="title"}}
+    </div>
 
-      <div class="form-group">
-        <label for="author">Author</label>
-        {{input value=author id="author"}}
-      </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      {{input value=author id="author"}}
+    </div>
 
-      <div class="form-group">
-        <label for="body">Details</label>
-        {{input value=body id="body"}}
-      </div>
-      <button class='btn btn-info' {{action 'update' question}}>Update</button>
+    <div class="form-group">
+      <label for="body">Details</label>
+      {{input value=body id="body"}}
+    </div>
+    <button class='btn btn-info' {{action 'update' question}}>Update</button>
   </form>
 {{else}}
   <button class='btn btn-info' {{action 'updateQuestionForm'}}>Update Question</button>

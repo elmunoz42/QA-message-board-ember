@@ -4,7 +4,6 @@ Ember App that allows users to post music trivia questions and/or respective ans
 
 ## Planning
 
-
 |Objective |Strategy |
 |:---------|:--------|
 |1)Application template contains header with link(s). Include a header and/or navbar that appears on all pages containing the name of your site and a link to the home page.|Application template automatically generated. Style it. Add link back to homepage.|
