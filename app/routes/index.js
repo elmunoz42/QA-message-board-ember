@@ -1,32 +1,30 @@
 import Ember from 'ember';
 
 
-// These code snippets use an open-source library.
-// str.replace
-// questions: this.store.findAll('question')
-// result.artist.bio.summary.replace(result.artist.name, "???")
-// function(params) {
-// var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=8dc2d4f18f375fe36dd7b63b96a2e243&format=json";
-// return Ember.$.getJSON(url);
-
-// model: function(params) {
-//    var url = 'http://congress.api.sunlightfoundation.com/legislators/locate?apikey=[YOUR_API_KEY_HERE]&zip=' + params.zip;
-//    return Ember.$.getJSON(url).then(function(responseJSON) {
-//      return responseJSON.results;
-//    });
-//   }
 
 var triviaGetter = function(){
-  var artists = ['Cher','Chicago','Boston','Abba','Prince', 'Metallica', 'Eagles', 'Rihanna', 'ACDC', 'Eminem', 'Aerosmith', 'U2', 'Adele', 'Santana', 'Coldplay', 'R.E.M'];
+
+  var artists = ['Cher','Chicago','Boston','Abba','Prince', 'Metallica', 'Eagles', 'Rihanna', 'AC/DC', 'Eminem', 'Aerosmith', 'U2', 'Adele', 'Santana', 'Coldplay', 'R.E.M'];
   var trivia = [];
   for (var i = 0, len = artists.length; i < len; i++) {
       Ember.$.getJSON("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist="+ artists[i]+"&api_key=8dc2d4f18f375fe36dd7b63b96a2e243&format=json")
     .then(function (result) {
-    console.log(result);
+    var artist = result.artist.name;
+    // NOTE this separates the link from the rest of the bio.
+    var bioArrWithLink = result.artist.bio.summary.split('<a');
+    var bioArr = bioArrWithLink[0].split(' ');
+    var artistLink = 'href="https://www.last.fm/music/' + artist + '">';
+    // NOTE replaces the artist name with blank space
+    for (var j = 0; j < bioArr.length; j++) {
+      if (bioArr[j]===artist) {
+        bioArr[j] = "______";
+      }
+    };
+    var bioWithBlanks = bioArr.join(' ');
         trivia.push({
           author: "lastFM",
           title: result.artist.tags.tag[0].name + ", " + result.artist.tags.tag[1].name + ", " + result.artist.tags.tag[2].name,
-          body: result.artist.bio.summary.replace(result.artist.name, "Phil Inda Blanque")
+          body: bioWithBlanks
         });
     });
   };
