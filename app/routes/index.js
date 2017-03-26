@@ -17,22 +17,20 @@ import Ember from 'ember';
 //   }
 
 var triviaGetter = function(){
-  var trivia = []; Ember.$.getJSON("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=8dc2d4f18f375fe36dd7b63b96a2e243&format=json")
-.then(function (result) {
-  console.log(
-    {
-        author: "lastFM",
-        title: "Who is ..." + result.artist.tags.tag[0].name + ", " + result.artist.tags.tag[1].name + ", " + result.artist.tags.tag[2].name,
-        body: result.artist.bio.summary.replace(result.artist.name, "_____")
-    }
-    );
-    trivia[0] = {
-      author: "lastFM",
-      title: "Who is ..." + result.artist.tags.tag[0].name + ", " + result.artist.tags.tag[1].name + ", " + result.artist.tags.tag[2].name,
-      body: "test"
-    };
+  var artists = ['Cher','Chicago','Boston','Abba','Prince', 'Metallica', 'Eagles', 'Rihanna', 'ACDC', 'Eminem', 'Aerosmith', 'U2', 'Adele', 'Santana', 'Coldplay', 'R.E.M'];
+  var trivia = [];
+  for (var i = 0, len = artists.length; i < len; i++) {
+      Ember.$.getJSON("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist="+ artists[i]+"&api_key=8dc2d4f18f375fe36dd7b63b96a2e243&format=json")
+    .then(function (result) {
+    console.log(result);
+        trivia.push({
+          author: "lastFM",
+          title: result.artist.tags.tag[0].name + ", " + result.artist.tags.tag[1].name + ", " + result.artist.tags.tag[2].name,
+          body: result.artist.bio.summary.replace(result.artist.name, "Phil Inda Blanque")
+        });
+    });
+  };
 
-});
   return trivia;
 };
 
